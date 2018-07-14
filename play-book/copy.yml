@@ -1,0 +1,24 @@
+# This Ansible play-book is used for copying the local file or folder to the seletced destination host.
+---
+- hosts: '{{ hosts }}'
+  gather_facts: false
+  remote_user: '{{ user }}'
+  become: true
+  tasks:
+  - name: Copy multiple file or folder to the remote host.
+    copy:
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
+      mode: "{{ item.mode }}"
+    register: result
+    with_items:
+  - name: Debug - Print debug message
+    debug:
+      msg: "{{ result }}"
+  - name: Send notification message via Slack
+    slack:
+      token: <Replaced to your slack token at here>
+      msg: "{{ inventory_hostname }} {{ result | to_nice_json }}"
+      color: good
+      channel: #ansible
+      icon_url: https://techblog.recochoku.jp/2808/Ansible-e1500023954352.png
