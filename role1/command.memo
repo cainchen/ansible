@@ -1,0 +1,14 @@
+### Referenced:
+# https://itnext.io/create-a-host-inventory-in-a-minute-with-ansible-c7bf251166d9
+# https://hant.helplib.com/GitHub/article_127990
+# https://www.oel7.com/how-to-create-a-hosts-inventory-using-ansible/
+ansible-cmdb -i ../../hosts -t html_fancy_split -p local_js=1 ../../logs/
+ansible-cmdb -t csv -p host_details=1 facts > all_hosts.csv
+ansible-cmdb -t markdown -p host_details=1 facts > all_hosts.md
+ansible-cmdb -t sql -p host_details=1 facts > all_hosts.sql
+### ----
+### Filter target host
+ansible "~(stg|prd)-ubuntu*" -m ping
+ansible '*:!pending' -m ping
+### ----
+#

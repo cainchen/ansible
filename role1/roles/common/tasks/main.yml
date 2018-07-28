@@ -14,6 +14,6 @@
 - name: Updating package repository.
   block:
     - include: centos.yml
-      when: ansible_distribution == 'Centos'
+      when: ansible_distribution == 'CentOS'
     - include: ubuntu.yml
       when: ansible_distribution == 'Ubuntu'

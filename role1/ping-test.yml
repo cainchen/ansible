@@ -1,7 +1,6 @@
 ---
 - hosts: proxy
-  gather_facts: false
-  remote_user: xxxxn
+  remote_user: '{{ user }}'
   tasks:
     #- name: Test to ping to remote hosts from the localhost.
     #  ping:

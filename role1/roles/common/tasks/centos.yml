@@ -1,1 +1,8 @@
 ---
+- name: Test variable it was defined in role/common/defaults/main.yml
+  command: echo '{{ def_main }}'
+  register: def_main
+  when: ansible_distribution == 'CentOS' ## This 'When' is used to disabled executing this task.
+- name: Show debug message
+  debug:
+    msg: '{{ def_main }}'

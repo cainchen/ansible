@@ -6,7 +6,7 @@
     - '{{ ntpd_check }}'
     - '{{ ntpdate_check }}'
   register: check_result
-  ignore_errors: True 
+  ignore_errors: True
 - name: Updating apt repository
   apt:
     update_cache: yes
@@ -14,8 +14,8 @@
   when: ansible_distribution == 'something' ## This 'When' is used to disabled executing this task.
 - name: Test variable it was defined in defaults/main.yml
   command: echo '{{ def_main }}'
-  register: def_var
-  when: ansible_distribution == 'something' ## This 'When' is used to disabled executing this task.
+  register: def_main
+  when: ansible_distribution == 'CentOS' ## This 'When' is used to disabled executing this task.
 - name: Show debug message
   debug:
-    msg: '{{ update }},{{ def_var }},{{ check_result }}'
+    msg: '{{ update }},{{ def_main }},{{ check_result }}'

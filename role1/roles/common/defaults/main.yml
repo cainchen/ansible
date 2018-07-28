@@ -2,3 +2,4 @@
 selinux_check: grep -i 'selinux=enforcing' /etc/selinux/config
 ntpd_check: ntpd -v
 ntpdate_check: ntpdate -v
+def_main: Hi, I am CentOS. This message has defined in a path role/comm/defaults/main.yml
