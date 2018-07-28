@@ -1,0 +1,17 @@
+[all]
+prd-client[1:3]
+[centos-common]
+prd-client3
+[ubuntu-common]
+prd-client[1:2]
+[proxy]
+prd-client1
+[samba]
+prd-client3
+[centos:children]
+centos-common
+samba
+[ubuntu:children]
+ubuntu-common
+proxy
+[new]

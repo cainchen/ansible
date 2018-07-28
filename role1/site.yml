@@ -1,0 +1,9 @@
+---
+- hosts: '{{ hosts }}'
+  remote_user: xxxx
+  become: true
+  roles:
+    # - { role: common , tag: "common" }
+    # - { role: squid , tag: "dev" }
+    - common
+    - squid
