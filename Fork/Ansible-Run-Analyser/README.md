@@ -1,20 +1,17 @@
 [![CircleCI](https://circleci.com/gh/AjinkyaBapat/Ansible-Run-Analyser/tree/master.svg?style=svg&circle-token=7f1296f39d95b79a100375ad55a2299c4c77b4a7)](https://circleci.com/gh/AjinkyaBapat/Ansible-Run-Analyser/tree/master) [![CircleCI token](https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser/master.svg?style=plastic)](https://circleci.com/gh/AjinkyaBapat/Ansible-Run-Analyser)
 
-### **************************************************************************
-#
-# No description yet.
-#
-# Dependencies:
-# - Ansible, Python 2.7 above, SSH
-#
-# Made(Creator): Ajinkya
-# Contact:       ajinkyabapat12@gmail.com
-# Created:       
-# Last modified: 
-# Passed(tested) for:
-#   - Ubuntu 14 to 17
-#
-### **************************************************************************
+*************************************************************************
+Dependencies:
+ - Ansible, Python 2.7 above, SSH
+
+ Made(Creator): Ajinkya
+ Contact:       ajinkyabapat12@gmail.com
+ Created:       
+ Last modified: 
+ Passed(tested) for:
+   - Ubuntu 14 to 17
+
+*************************************************************************
 
 
 ARA
