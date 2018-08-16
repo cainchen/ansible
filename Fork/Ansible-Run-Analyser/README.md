@@ -62,9 +62,12 @@ Modify below let them to the you want address and port:
 Ansible-Run-Analyser/roles/ARA/defaults/main.yml
 
 === main.yml ===
-   ...
-   ara_webserver_port: 9191      ## For a example: 8800
-   ara_webserver_ip: 127.0.0.1   ## For a example: "{{ ansible_default_ipv4.address }}"
+   
+...
+
+ara_webserver_port: 9191      ## For a example: 8800
+
+ara_webserver_ip: 127.0.0.1   ## For a example: "{{ ansible_default_ipv4.address }}"
 
 === End ===
 
