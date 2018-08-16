@@ -1,0 +1,10 @@
+---
+- hosts: '{{ hosts }}'
+  remote_user: '{{ user }}'
+  become: true
+  roles:
+    # - { role: standard , tag: "standard" }
+    # - { role: squid , tag: "dev" }
+    - standard
+    # - samba
+    # - squid

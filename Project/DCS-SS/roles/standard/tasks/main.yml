@@ -1,0 +1,19 @@
+---
+#- name: Show system partition usage status -- Only impact to all Ubuntu system.
+#  poll: 0
+#  when: ansible_distribution == 'Ubuntu'
+#  tags:
+#    - nun1
+#  command: df -h
+#  register: run
+#- name: List all items under the root partition -- Only impact to all CentOS system.
+#  when: ansible_distribution == 'CentOS'
+#  tags:
+#    - nun2
+#  command: ls /
+- name: Updating package repository.
+  block:
+    - include: centos.yml
+      when: ansible_distribution == 'Centos'
+    - include: ubuntu.yml
+      when: ansible_distribution == 'Ubuntu'

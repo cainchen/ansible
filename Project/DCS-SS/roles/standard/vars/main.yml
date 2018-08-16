@@ -1,0 +1,3 @@
+---
+standard_vars_main: Yes,standard-vars-main.yml
+ntp_timezone: Asia/Taipei

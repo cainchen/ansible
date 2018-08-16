@@ -1,0 +1,32 @@
+---
+- hosts: '{{ hosts }}'
+  remote_user: '{{ user }}'
+  tasks:
+    #- name: Test to ping to remote hosts from the localhost.
+    #  ping:
+    #  register: result
+    #  when: ansible_hostname == "prd-client1"
+    #  when: ansible_local.ansible.deploy.ver == "1.16"
+    #  when: ansible_local.ansible.deploy.ver == "1.16" and (ansible_local.ansible.deploy.env == "PROD")
+    #- name: Show debug message
+    #  debug:
+    #    msg: "{{ result }}"
+    #- name: All hosts run this task.
+    #  shell: hostname
+    #  register: info
+    #- name: The hostname included 'stg' skipped run this task.
+    #  debug: 'msg="{{ ansible_fqdn }}"'
+    #  when: info.stdout.find('stg')
+    #- name: Test to ping to remote host.
+    #  ping:
+    #  register: result
+    #- name: GET ENVS
+    #  shell: "echo $ENVS"
+    #  delegate_to: localhost
+    #  register: echo_envs
+    #- name: ECHI ENVS
+    #  debug: msg="{{ echo_envs.stdout }}"
+    #  when: ansible_distribution == 'Ubuntu'
+    - name: Show group_vars
+      debug: msg='{{ test1 }},{{ test2 }}'
+      when: ansible_distribution == 'Ubuntu'

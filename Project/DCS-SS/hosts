@@ -1,0 +1,8 @@
+[all]
+dev-centos69.001
+stg-centos69.00[1:2]
+prod-centos69.001
+dev-ubuntu16.00[1:2]
+stg-ubuntu16.00[1:2]
+prod-ubuntu16.00[1:2]
+[new]

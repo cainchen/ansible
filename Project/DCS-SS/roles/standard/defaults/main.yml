@@ -1,0 +1,5 @@
+---
+selinux_check: grep -i 'selinux=enforcing' /etc/selinux/config
+ntpd_check: ntpd -v
+ntpdate_check: ntpdate -v
+standard_defaults_main: Yes,standard_defaults_main.yml
