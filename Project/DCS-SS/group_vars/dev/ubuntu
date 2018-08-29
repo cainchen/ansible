@@ -1,2 +1,0 @@
-test1: /group_vars/dev/ Hello Ubunt -- '{{ ENVS }}'
-test2: /group_vars/dev/ Welcome Ubuntu -- '{{ ENVS }}'

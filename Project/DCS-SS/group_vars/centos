@@ -1,2 +1,0 @@
----
-group_vars_centos: Yes,group_vars_centos -- '{{ ENVS }}'

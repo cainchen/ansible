@@ -1,2 +1,0 @@
-test1: TEST1 nothing to do -- '{{ ENVS }}'
-test2: TEST2 nothing to do -- '{{ ENVS }}'
